@@ -6,8 +6,8 @@ exports.run = (client, message, args) => {
   
     message.delete();
     const embed = new Discord.RichEmbed()
-    .setAuthor(message.author.username + ` Duyuru Yaptı`)
-    .setColor("#18BF7E")
+    .setAuthor("Discord Turk Bot")
+    .setColor("RANDOM")
     .setDescription(`${mesaj}`)
     return message.channel.sendEmbed(embed);
 };
