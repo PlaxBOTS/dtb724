@@ -132,7 +132,7 @@ client.on("message", async message => {
     if (!message.guild) return
     if (message.guild.id == "509056257773142028") {
     if (message.content.toLowerCase() === prefix + 'kayıtol') {
-      let rol = message.guild.roles.find(r => r.name === "ÜYELER");
+      let rol = message.guild.roles.find(r => r.name === "Üyeler");
       if (!rol) return message.reply("Hata: Rol bulunamadı! `Lütfen yetkililere bildiriniz!`")
       message.member.addRole(rol)
       message.channel.send(":white_check_mark: **Başarıyla Üye rolü aldın!**")
