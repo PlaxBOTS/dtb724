@@ -128,4 +128,17 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
+client.on("message", async message => {
+    if (!message.guild) return
+    if (message.guild.id == "509056257773142028") {
+    if (message.content.toLowerCase() === prefix + 'kayıtol') {
+      let rol = message.guild.roles.find(r => r.name === "ÜYELER");
+      if (!rol) return message.reply("Hata: Rol bulunamadı! `Lütfen yetkililere bildiriniz!`")
+      message.member.addRole(rol)
+      message.channel.send(":white_check_mark: **Başarıyla Üye rolü aldın!**")
+    }
+    } else {
+     return
+    }
+})
 client.login(process.env.BOT_TOKEN);
