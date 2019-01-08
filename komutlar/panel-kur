@@ -1,0 +1,25 @@
+const Discord = require('discord.js');
+
+exports.run = (client, message, args) => {
+    let guild = message.guild;
+    if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(`:red: Bu komutu kullanabilmek için "**Kurucu**" yetkisine sahip olmalısın. :red:`);
+  
+  guild.createChannel(`Toplam Kullanıcı Sayısı : ${guild.memberCount}`, 'voice');
+  guild.createChannel(`Üye Sayısı : ${guild.members.filter(m => !m.user.bot).size}`, 'voice');
+  guild.createChannel(`Bot Sayısı : ${guild.members.filter(m => m.user.bot).size}`, 'voice');
+
+  message.channel.send(` :white_check_mark: Sunucumuza özel panel kuruldu ! :white_check_mark:  `);
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['panelkur'],
+  permLevel: 4
+};
+
+exports.help = {
+  name: 'panel-kur',
+  description: 'Sunucudaki üye sayısını kanallarda gösterecek bir sistem kurar.',
+  usage: 'panel-kur'
+}; 
