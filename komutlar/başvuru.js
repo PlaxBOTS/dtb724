@@ -20,7 +20,7 @@ exports.run = function(client, message, args) {
 			.addField("Başvuru", başvuru)
 		
         client.guilds.get(guildID).channels.get(channelID).send(embed);
-        message.reply(":white_check_mark: Başvurunuz alınmıştır. Yanıt bekleyin !, Yanlış bir başvuru gönderdiyseniz aksi takdirde başvurnuzun sayılmayacak, ve 2 gün başvurunuz kabul edilmeyecektir. :white_check_mark: ");
+        message.reply(":white_check_mark: Başvurunuz alınmıştır. Yanıt bekleyin !, Saçma bir başvuru gönderdiyseniz, aksi takdirde başvurnuzun sayılmayacak, ve 2 gün başvurunuz kabul edilmeyecektir. :white_check_mark: ");
 	};
 
 
