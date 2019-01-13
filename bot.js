@@ -14,7 +14,7 @@ const log = message => {
 };
 
 client.on("ready", () => {
-  client.user.setGame("Discord Turk Bots Grubunun Botları İle ilgileniyor.") 
+  client.user.setGame("Kayıt olmak için d!kayıtol - Discord Turk Bots Grubunun Botları İle ilgileniyor.") 
   console.log("Bağlandım!")   
 });
 
